@@ -1,7 +1,6 @@
 import User from '../models/UserModel';
 import { USER_ERRORS } from '../errors';
 
-// eslint-disable-next-line consistent-return
 const checkParticipationValue = (participation, res) => {
   if (participation < 0) {
     return res.status(400).json({ error: USER_ERRORS.PARTICIPATION_LESS_THAN_0 });
