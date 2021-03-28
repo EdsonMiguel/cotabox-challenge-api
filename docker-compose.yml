@@ -1,0 +1,5 @@
+db:
+  image: "mongo"
+  container_name: MONGODB-COTABOX
+  ports:
+    - "27017:27017"
