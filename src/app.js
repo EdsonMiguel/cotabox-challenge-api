@@ -17,6 +17,12 @@ class App {
   }
 
   routes() {
+    this.server.get('/api', (req, res) => {
+      res.status(200).json({
+        aplication: 'Cotabox Challenge API',
+        status: 'OK',
+      });
+    });
     const userRouter = new UserRouter('/api/user');
     this.server.use(userRouter.path, userRouter.router);
   }
